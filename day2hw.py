@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 
-marathon = pd.read_csv('marathon_results.csv')
+marathon = pd.read_csv('./CSVs/marathon_results.csv')
 df_marathon = pd.DataFrame(data=marathon)
 del df_marathon['Unnamed: 0']
 
@@ -14,7 +14,7 @@ def average_age_by_state(dataset):
     by_state = dataset[['State', 'Age']].groupby('State').mean()
     return by_state.astype(int)
 
-# print(average_age_by_state(df_marathon))
+print(average_age_by_state(df_marathon))
 
 # Question 2 - What country has the most participants? USA
 
